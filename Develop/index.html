@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Work Day Scheduler</title>
+  </head>
+
+  <body style="font-size: 40px;">
+    <header class="jumbotron">
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p id="currentDay" class="lead"></p>
+    </header>
+    <div class="container">
+      <form id="Main-Form"></form>
+      <!-- Timeblocks go here -->
+      <div class="row">
+        <div class="col-2 text-center border border-1 border-primary">12AM</div>
+          <input class="col-8" form="Main-Form" type="text" id="0">
+          <input class="col-2 text-center bg-primary bg-gradient text-white" form="Main-Form" type="button" onclick="SaveData()" value="Save">
+      </div>
+      <div class="row">
+        <div class="col-2 text-center border border-1 border-primary">1AM</div>
+          <input class="col-8" form="Main-Form" type="text" id="1">
+          <input class="col-2 text-center bg-primary bg-gradient text-white" form="Main-Form" type="button" onclick="SaveData()" value="Save">
+      </div>
+      <div class="row">
+        <div class="col-2 text-center border border-1 border-primary">2AM</div>
+          <input class="col-8" form="Main-Form" type="text" id="2">
+          <input class="col-2 text-center bg-primary bg-gradient text-white" form="Main-Form" type="button" onclick="SaveData()" value="Save">
+      </div>
+      <div class="row">
+        <div class="col-2 text-center border border-1 border-primary">3AM</div>
+          <input class="col-8" form="Main-Form" type="text" id="3">
+          <input class="col-2 text-center bg-primary bg-gradient text-white" form="Main-Form" type="button" onclick="SaveData()" value="Save">
+      </div>
+      <div class="row">
+        <div class="col-2 text-center border border-1 border-primary">4AM</div>
+          <input class="col-8" form="Main-Form" type="text" id="4">
+          <input class="col-2 text-center bg-primary bg-gradient text-white" form="Main-Form" type="button" onclick="SaveData()" value="Save">
+      </div>
+      <div class="row">
+        <div class="col-2 text-center border border-1 border-primary">5AM</div>
+          <input class="col-8" form="Main-Form" type="text" id="5">
+          <input class="col-2 text-center bg-primary bg-gradient text-white" form="Main-Form" type="button" onclick="SaveData()" value="Save">
+      </div>
+      <div class="row">
+        <div class="col-2 text-center border border-1 border-primary">6AM</div>
+          <input class="col-8" form="Main-Form" type="text" id="6">
+          <input class="col-2 text-center bg-primary bg-gradient text-white" form="Main-Form" type="button" onclick="SaveData()" value="Save">
+      </div>
+      <div class="row">
+        <div class="col-2 text-center border border-1 border-primary">7AM</div>
+          <input class="col-8" form="Main-Form" type="text" id="7">
+          <input class="col-2 text-center bg-primary bg-gradient text-white" form="Main-Form" type="button" onclick="SaveData()" value="Save">
+      </div>
+      <div class="row">
+        <div class="col-2 text-center border border-1 border-primary">8AM</div>
+          <input class="col-8" form="Main-Form" type="text" id="8">
+          <input class="col-2 text-center bg-primary bg-gradient text-white" form="Main-Form" type="button" onclick="SaveData()" value="Save">
+      </div>
+      <div class="row">
+        <div class="col-2 text-center border border-1 border-primary">9AM</div>
+          <input class="col-8" form="Main-Form" type="text" id="9">
+          <input class="col-2 text-center bg-primary bg-gradient text-white" form="Main-Form" type="button" onclick="SaveData()" value="Save">
+      </div>
+      <div class="row">
+        <div class="col-2 text-center border border-1 border-primary">10AM</div>
+          <input class="col-8" form="Main-Form" type="text" id="10">
+          <input class="col-2 text-center bg-primary bg-gradient text-white" form="Main-Form" type="button" onclick="SaveData()" value="Save">
+      </div>
+      <div class="row">
+        <div class="col-2 text-center border border-1 border-primary">11AM</div>
+          <input class="col-8" form="Main-Form" type="text" id="11">
+          <input class="col-2 text-center bg-primary bg-gradient text-white" form="Main-Form" type="button" onclick="SaveData()" value="Save">
+      </div>
+      <div class="row">
+        <div class="col-2 text-center border border-1 border-primary">12PM</div>
+          <input class="col-8" form="Main-Form" type="text" id="12">
+          <input class="col-2 text-center bg-primary bg-gradient text-white" form="Main-Form" type="button" onclick="SaveData()" value="Save">
+      </div>
+      <div class="row">
+        <div class="col-2 text-center border border-1 border-primary">1PM</div>
+          <input class="col-8" form="Main-Form" type="text" id="13">
+          <input class="col-2 text-center bg-primary bg-gradient text-white" form="Main-Form" type="button" onclick="SaveData()" value="Save">
+      </div>
+      <div class="row">
+        <div class="col-2 text-center border border-1 border-primary">2PM</div>
+          <input class="col-8" form="Main-Form" type="text" id="14">
+          <input class="col-2 text-center bg-primary bg-gradient text-white" form="Main-Form" type="button" onclick="SaveData()" value="Save">
+      </div>
+      <div class="row">
+        <div class="col-2 text-center border border-1 border-primary">3PM</div>
+          <input class="col-8" form="Main-Form" type="text" id="15">
+          <input class="col-2 text-center bg-primary bg-gradient text-white" form="Main-Form" type="button" onclick="SaveData()" value="Save">
+      </div>
+      <div class="row">
+        <div class="col-2 text-center border border-1 border-primary">4PM</div>
+          <input class="col-8" form="Main-Form" type="text" id="16">
+          <input class="col-2 text-center bg-primary bg-gradient text-white" form="Main-Form" type="button" onclick="SaveData()" value="Save">
+      </div>
+      <div class="row">
+        <div class="col-2 text-center border border-1 border-primary">5PM</div>
+          <input class="col-8" form="Main-Form" type="text" id="17">
+          <input class="col-2 text-center bg-primary bg-gradient text-white" form="Main-Form" type="button" onclick="SaveData()" value="Save">
+      </div>
+      <div class="row">
+        <div class="col-2 text-center border border-1 border-primary">6PM</div>
+          <input class="col-8" form="Main-Form" type="text" id="18">
+          <input class="col-2 text-center bg-primary bg-gradient text-white" form="Main-Form" type="button" onclick="SaveData()" value="Save">
+      </div>
+      <div class="row">
+        <div class="col-2 text-center border border-1 border-primary">7PM</div>
+          <input class="col-8" form="Main-Form" type="text" id="19">
+          <input class="col-2 text-center bg-primary bg-gradient text-white" form="Main-Form" type="button" onclick="SaveData()" value="Save">
+      </div>
+      <div class="row">
+        <div class="col-2 text-center border border-1 border-primary">8PM</div>
+          <input class="col-8" form="Main-Form" type="text" id="20">
+          <input class="col-2 text-center bg-primary bg-gradient text-white" form="Main-Form" type="button" onclick="SaveData()" value="Save">
+      </div>
+      <div class="row">
+        <div class="col-2 text-center border border-1 border-primary">9PM</div>
+          <input class="col-8" form="Main-Form" type="text" id="21">
+          <input class="col-2 text-center bg-primary bg-gradient text-white" form="Main-Form" type="button" onclick="SaveData()" value="Save">
+      </div>
+      <div class="row">
+        <div class="col-2 text-center border border-1 border-primary">10PM</div>
+          <input class="col-8" form="Main-Form" type="text" id="22">
+          <input class="col-2 text-center bg-primary bg-gradient text-white" form="Main-Form" type="button" onclick="SaveData()" value="Save">
+      </div>
+      <div class="row">
+        <div class="col-2 text-center border border-1 border-primary">11PM</div>
+          <input class="col-8" form="Main-Form" type="text" id="23">
+          <input class="col-2 text-center bg-primary bg-gradient text-white" form="Main-Form" type="button" onclick="SaveData()" value="Save">
+      </div>
+    </div>
+    <script src="./main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  </body>
+</html>
